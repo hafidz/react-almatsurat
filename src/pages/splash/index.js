@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {ILLogo} from '../../assets';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {AbcLogo} from '../../assets';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -10,8 +10,7 @@ const Splash = ({navigation}) => {
   }, []);
   return (
     <View style={styles.page}>
-      <ILLogo />
-      <Text style={styles.title}>Al Matsurat</Text>
+      <Image source={AbcLogo} style={styles.image} />
     </View>
   );
 };
@@ -24,11 +23,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#EDFCFD',
   },
   title: {
     fontSize: 20,
     fontWeight: '600',
     color: '#112340',
     marginTop: 20,
+  },
+  image: {
+    width: 300,
+    height: 300,
+    borderRadius: 50 / 2,
   },
 });

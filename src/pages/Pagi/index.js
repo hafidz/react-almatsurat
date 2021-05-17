@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, View} from 'react-native';
 import {Banner, Gap, List} from '../../components';
-import {JSONLIST} from '../../assets';
+import {JSONLISTPagi} from '../../assets';
 import {
   BannerAd,
   BannerAdSize,
@@ -27,14 +27,14 @@ function App() {
   );
 }
 
-const Login = ({navigation}) => {
+const Pagi = ({navigation}) => {
   return (
     <View style={styles.conts}>
       <SafeAreaView style={styles.container}>
         <ScrollView style={styles.ScrollView}>
           <View style={styles.page}>
             <Gap height={8} />
-            {JSONLIST.data.map(item => {
+            {JSONLISTPagi.data.map(item => {
               return (
                 <List
                   key={item.id}
@@ -56,7 +56,7 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Pagi;
 
 const styles = StyleSheet.create({
   page: {

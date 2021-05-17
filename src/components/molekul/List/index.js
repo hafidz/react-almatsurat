@@ -1,15 +1,19 @@
 import React from 'react';
 import {StyleSheet, ScrollView, Text, View, Dimensions} from 'react-native';
+import {Gap} from '../../atom';
 export default function List({ayat, arti, title, key}) {
   return (
     <View>
-      <Text style={styles.title_name}>{title}</Text>
+      <View style={styles.content}>
+        <Text style={styles.title_name}>{title}</Text>
+      </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={styles.content}>
           <Text style={styles.title}>{ayat}</Text>
           <Text style={styles.title_arti}>{arti}</Text>
         </View>
       </ScrollView>
+      <Gap height={10} />
     </View>
   );
 }
@@ -31,6 +35,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
     padding: 10,
     color: 'black',
+    textAlign: 'justify',
+    lineHeight: 20,
     width: Dimensions.get('window').width,
     fontFamily: 'Nunito-Light',
   },
@@ -41,7 +47,9 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     backgroundColor: '#0BCAD4',
     textAlign: 'left',
-    fontFamily: 'Nunito-Light',
+    minWidth: '50%',
+    borderBottomRightRadius: 15,
+    fontFamily: 'Nunito-Reguler',
   },
   content: {
     flexDirection: 'row',

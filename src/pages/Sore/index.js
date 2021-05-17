@@ -27,7 +27,7 @@ function App() {
   );
 }
 
-const Login = ({navigation}) => {
+const Sore = ({navigation}) => {
   return (
     <View style={styles.conts}>
       <SafeAreaView style={styles.container}>
@@ -56,7 +56,7 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Sore;
 
 const styles = StyleSheet.create({
   page: {

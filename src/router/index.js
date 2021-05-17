@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Splash, GetStarted, Register, Login, Setting} from '../pages';
+import {Splash, GetStarted, Register, Setting, Pagi, Sore} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -23,8 +23,16 @@ const Router = () => {
         options={{headerTitle: 'Al Matsurat Pagi', headerShown: true}}
       />
       <Stack.Screen
-        name="Login"
-        component={Login}
+        name="Pagi"
+        component={Pagi}
+        options={{
+          headerTitle: 'Al Matsurat Pagi',
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Sore"
+        component={Sore}
         options={{
           headerTitle: 'Al Matsurat Sore',
           headerShown: true,

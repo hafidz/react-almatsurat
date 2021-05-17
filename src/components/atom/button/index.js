@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Nunito-SemiBold',
     textAlign: 'center',
-    color: type === 'secondary' ? '#112340' : 'white',
+    color: type === 'secondary' ? '#0BCAD4' : 'white',
   }),
 });

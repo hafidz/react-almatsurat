@@ -1,42 +1,52 @@
+import {InterstitialAd} from '@react-native-firebase/admob';
 import React from 'react';
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {ILGetStarted, ILLogo} from '../../assets';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {AbcLogo, ILGetStarted, ILLogo} from '../../assets';
 import {Button, Gap} from '../../components';
+
+const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+  requestNonPersonalizedAdsOnly: true,
+  keywords: ['fashion', 'clothing'],
+});
 
 const GetStarted = ({navigation}) => {
   return (
-    <ImageBackground source={ILGetStarted} style={styles.page}>
+    <View style={styles.page}>
       <View>
-        <ILLogo />
-        <Text style={styles.titile_top}>Al Matsurat</Text>
+        <Image source={AbcLogo} style={styles.image} />
       </View>
       <View>
         <Button
           type=""
           title="Pagi"
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Pagi')}
         />
         <Gap height={16} />
         <Button
           type=""
           title="Sore"
-          onPress={() => navigation.replace('Login')}
+          onPress={() => navigation.navigate('Sore')}
         />
         <Gap height={16} />
         <Button
           type="secondary"
           title="Setting"
-          onPress={() => navigation.replace('Login')}
+          onPress={() => interstitial.show()}
         />
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
 export default GetStarted;
 
 const styles = StyleSheet.create({
-  page: {padding: 40, justifyContent: 'space-between', flex: 1},
+  page: {
+    padding: 40,
+    justifyContent: 'space-between',
+    flex: 1,
+    backgroundColor: '#EDFCFD',
+  },
   title: {
     fontSize: 28,
     textAlign: 'center',
@@ -48,5 +58,10 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontFamily: 'Nunito-Bold',
+  },
+  image: {
+    width: 300,
+    height: 300,
+    borderRadius: 50 / 2,
   },
 });

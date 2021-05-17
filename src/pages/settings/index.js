@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {IcActive, IcHelp, IcRate} from '../../assets';
-import {Link, Gap} from '../../components';
+import {Link, Gap, Banner} from '../../components';
 
 export default function Setting({navigation}) {
   return (
@@ -32,6 +32,8 @@ export default function Setting({navigation}) {
           onPress={() => navigation.replace('GetStarted')}
         />
       </View>
+      <Gap height={32} />
+      <Banner />
     </View>
   );
 }
