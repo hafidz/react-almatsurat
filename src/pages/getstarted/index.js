@@ -1,13 +1,7 @@
-import {InterstitialAd} from '@react-native-firebase/admob';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {AbcLogo, ILGetStarted, ILLogo} from '../../assets';
 import {Button, Gap} from '../../components';
-
-const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
-  requestNonPersonalizedAdsOnly: true,
-  keywords: ['fashion', 'clothing'],
-});
 
 const GetStarted = ({navigation}) => {
   return (
@@ -30,8 +24,8 @@ const GetStarted = ({navigation}) => {
         <Gap height={16} />
         <Button
           type="secondary"
-          title="Setting"
-          onPress={() => interstitial.show()}
+          title="Info"
+          onPress={() => navigation.navigate('Setting')}
         />
       </View>
     </View>
@@ -60,8 +54,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito-Bold',
   },
   image: {
-    width: 300,
+    width: 310,
     height: 300,
+    textAlign: 'center',
     borderRadius: 50 / 2,
   },
 });

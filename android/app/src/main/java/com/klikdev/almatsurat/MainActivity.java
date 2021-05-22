@@ -1,4 +1,4 @@
-package com.almatsurat;
+package com.klikdev.almatsurat;
 
 import com.facebook.react.ReactActivity;
 

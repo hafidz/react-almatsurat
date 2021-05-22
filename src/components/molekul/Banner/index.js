@@ -11,12 +11,12 @@ import {
 
 const adUnitId = __DEV__
   ? TestIds.REWARDED
-  : 'ca-app-pub-3940256099942544/6300978111';
+  : 'ca-app-pub-4433334973731129/5430284217';
 
 function App() {
   return (
     <BannerAd
-      unitId={TestIds.REWARDED}
+      unitId={'ca-app-pub-4433334973731129/5430284217'}
       size={BannerAdSize.FULL_BANNER}
       requestOptions={{
         requestNonPersonalizedAdsOnly: true,
@@ -26,7 +26,12 @@ function App() {
 }
 
 export default function Banner() {
-  return <BannerAd unitId={TestIds.BANNER} size={BannerAdSize.FULL_BANNER} />;
+  return (
+    <BannerAd
+      unitId={'ca-app-pub-4433334973731129/5430284217'}
+      size={BannerAdSize.FULL_BANNER}
+    />
+  );
 }
 
 const styles = StyleSheet.create({});

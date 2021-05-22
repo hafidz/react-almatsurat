@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     color: '#EDFCFD',
     padding: 5,
     paddingLeft: 10,
-    backgroundColor: '#0BCAD4',
+    backgroundColor: '#48B7EA',
     textAlign: 'left',
     minWidth: '50%',
     borderBottomRightRadius: 15,

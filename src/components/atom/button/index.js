@@ -13,7 +13,7 @@ export default Button;
 
 const styles = StyleSheet.create({
   container: type => ({
-    backgroundColor: type === 'secondary' ? 'white' : '#0BCAD4',
+    backgroundColor: type === 'secondary' ? 'white' : '#48B7EA',
     paddingVertical: 10,
     borderRadius: 10,
   }),
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Nunito-SemiBold',
     textAlign: 'center',
-    color: type === 'secondary' ? '#0BCAD4' : 'white',
+    color: type === 'secondary' ? '#48B7EA' : 'white',
   }),
 });

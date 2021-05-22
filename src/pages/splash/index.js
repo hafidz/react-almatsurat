@@ -19,11 +19,10 @@ export default Splash;
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: 'white',
+    backgroundColor: '#EDFCFD',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#EDFCFD',
   },
   title: {
     fontSize: 20,
@@ -33,6 +32,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 300,
+    textAlign: 'center',
     height: 300,
     borderRadius: 50 / 2,
   },

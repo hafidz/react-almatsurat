@@ -41,7 +41,7 @@ const Router = () => {
       <Stack.Screen
         name="Setting"
         component={Setting}
-        options={{headerTitle: 'Setting', headerShown: true}}
+        options={{headerTitle: 'Info', headerShown: true}}
       />
     </Stack.Navigator>
   );
