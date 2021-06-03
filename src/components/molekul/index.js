@@ -1,5 +1,6 @@
 import List from './List';
 import Banner from './Banner';
-// import InterstitialAds from './InterstitialAds';
+import BannerSetting from './BannerSetting';
+import BannerPagi from './BannerPagi';
 
-export {List, Banner};
+export {List, Banner, BannerSetting, BannerPagi};

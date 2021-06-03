@@ -1,15 +1,8 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, View} from 'react-native';
-import {Banner, Gap, List} from '../../components';
+import {BannerPagi, Gap, List} from '../../components';
 import {JSONLISTPagi} from '../../assets';
-import {
-  BannerAd,
-  BannerAdSize,
-  InterstitialAd,
-  RewardedAd,
-  RewardedAdEventType,
-  TestIds,
-} from '@react-native-firebase/admob';
+import {BannerAd, BannerAdSize, TestIds} from '@react-native-firebase/admob';
 
 const adUnitId = __DEV__
   ? TestIds.REWARDED
@@ -45,12 +38,12 @@ const Pagi = ({navigation}) => {
               );
             })}
             <Gap height={8} />
-            <Banner />
+            <BannerPagi />
           </View>
         </ScrollView>
       </SafeAreaView>
       <View>
-        <Banner />
+        <BannerPagi />
       </View>
     </View>
   );

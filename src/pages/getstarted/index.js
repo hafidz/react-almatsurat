@@ -24,7 +24,7 @@ const GetStarted = ({navigation}) => {
         <Gap height={16} />
         <Button
           type="secondary"
-          title="Info"
+          title="Keutamaan Al-Matsurat"
           onPress={() => navigation.navigate('Setting')}
         />
       </View>

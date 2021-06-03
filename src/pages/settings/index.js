@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, Image, StyleSheet, Text, View} from 'react-native';
 import {IcActive, IcHelp, IcRate} from '../../assets';
-import {Gap, Banner} from '../../components';
+import {Gap, BannerSetting} from '../../components';
 
 export default function Setting({navigation}) {
   return (
@@ -82,7 +82,7 @@ export default function Setting({navigation}) {
           Terima kasih sudah menggunakan applikasi ini, semoga bermanfaat.
         </Text>
       </ScrollView>
-      <Banner />
+      <BannerSetting />
     </View>
   );
 }
